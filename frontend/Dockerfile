@@ -11,10 +11,10 @@ CMD ["npm","run","dev","--","--host","0.0.0.0"]
 
 FROM node:20-alpine AS build
 WORKDIR /app
-ENV NODE_ENV=production
 COPY package*.json ./
 RUN npm ci --no-audit --no-fund
 COPY . .
+ENV NODE_ENV=production
 RUN npm run build
 
 FROM nginx:alpine AS prod
