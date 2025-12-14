@@ -8,7 +8,7 @@ env:
   AWS_REGION: eu-south-2
   ECR_REPOSITORY_BACKEND: studyflow-backend
   ECR_REPOSITORY_FRONTEND: studyflow-frontend
-  EKS_CLUSTER_NAME: studyflow-cluster
+  EKS_CLUSTER_NAME: studyflow
 
 jobs:
   build-and-push:
